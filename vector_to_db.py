@@ -86,6 +86,7 @@ from get_image_vector3 import deep_rank_model as vgg_model
 from get_name_vector import load_name_bert_model as name_model
 from get_name_desc_vector import load_name_description_bert_model as name_desc_model
 
+global not_found_count
 not_found_count =0
 
 def load_model():
