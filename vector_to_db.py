@@ -135,10 +135,7 @@ def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2
             inception_embedding = np.zeros((vector_dim,), dtype=float)
             vgg_embedding = np.zeros((vector_dim,), dtype=float)
 
-        name_embedding = name_model(post)
-        name_desc_embedding = name_desc_model(post)
-        post['name_vector'] = name_embedding
-        post['name_desc_vector'] = name_desc_embedding
+
 
 
         post['resnet_vector'] = resnet_embedding.tolist()
@@ -146,6 +143,13 @@ def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2
         post['vgg_vector'] = vgg_embedding.tolist()
 
         model_posts.append(post)
+    for i in model_posts:
+        name_embedding = name_model(post)
+        i['name_vector'] = name_embedding
+
+    for i in model_posts:
+        name_desc_embedding = name_desc_model(post)
+        i['name_desc_vector'] = name_desc_embedding
 
     return model_posts
 

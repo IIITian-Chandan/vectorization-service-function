@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad069240-b332-4bd4-bf35-d22984047405" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/get_name_desc_vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_name_desc_vector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_name_vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_name_vector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_to_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/vector_to_db.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vector_to_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="117" column="96" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="96" />
+            <state relative-caret-position="216">
+              <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -37,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_name_desc_vector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -74,9 +73,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vector_to_db.py" />
         <option value="$PROJECT_DIR$/get_name_vector.py" />
         <option value="$PROJECT_DIR$/get_name_desc_vector.py" />
+        <option value="$PROJECT_DIR$/vector_to_db.py" />
       </list>
     </option>
   </component>
@@ -141,12 +140,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554896112779</updated>
-      <workItem from="1554896118444" duration="3767000" />
+      <workItem from="1554896118444" duration="4227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3767000" />
+    <option name="totallyTimeSpent" value="4227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="27" width="1319" height="741" extended-state="6" />
@@ -182,16 +181,6 @@
     <entry file="file://$PROJECT_DIR$/get_image_vector1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vector_to_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="117" column="96" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_name_vector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -208,6 +197,16 @@
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vector_to_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
