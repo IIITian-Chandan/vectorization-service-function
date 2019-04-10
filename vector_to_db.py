@@ -75,18 +75,11 @@ from tensorflow.keras.applications.mobilenet import MobileNet
 from tensorflow.keras.layers import Dropout, Flatten, Dense, Input, MaxPool2D, GlobalAveragePooling2D, Lambda, Conv2D, concatenate, ZeroPadding2D, Layer, MaxPooling2D
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras import backend as K
-# from utils import get_layers_output_by_name
-import random
-# from loss import *
-from tensorflow.python.lib.io import file_io
-import os
-import zipfile
+
 from tqdm import tqdm
 
 import sys
-import model
-import controller
-from tensorflow.keras.models import model_from_json
+
 from get_image_vector1 import deep_rank_model as resnet_model
 from get_image_vector2 import deep_rank_model as inception_model
 from get_image_vector3 import deep_rank_model as vgg_model
@@ -217,6 +210,7 @@ if __name__ == "__main__":
     # WEBSITE_ID_HASH["marksandspencer_gb"] = "5c3caf2429ecc300044c5f69"
 
     load_model()
+    print("model loaded successfully")
     website_id_hash = WEBSITE_ID_HASH
 
     MONGODB_URL2 = 'mongodb://root:MTyvE6ikos87@mongodb-dev.greendeck.co:27017/admin'
