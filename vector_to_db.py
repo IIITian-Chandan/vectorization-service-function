@@ -220,7 +220,7 @@ if __name__ == "__main__":
     )
     db_prod = client_dev.black_widow_development
     db_dev = client_dev.faissal_dev
-    collection = db_prod.freshlabels_cz_combined_products
+    collection = db_dev.freshlabels_cz_combined_products
     new_collection = db_dev["freshlabels_cz_combined_products"+"_old_3ir_2nlp_"+ datetime.strftime(datetime.now(), '%Y_%m_%d')]
     for key, website_id in website_id_hash.items():
         print(key)
