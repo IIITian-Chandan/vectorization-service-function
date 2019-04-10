@@ -86,8 +86,7 @@ from get_image_vector3 import deep_rank_model as vgg_model
 from get_name_vector import load_name_bert_model as name_model
 from get_name_desc_vector import load_name_description_bert_model as name_desc_model
 
-global not_found_count
-not_found_count =0
+
 
 def load_model():
     resnet_model_file = "filestore/k8/vector_service/ir_vector/resnet_old/model.h5"
@@ -127,7 +126,6 @@ def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2
                 inception_embedding = inception_model_loaded.predict([image])[0]
                 vgg_embedding = vgg_model_loaded.predict([image])[0]
         except OSError as ose:
-            not_found_count+=1
             resnet_embedding = np.zeros((vector_dim,), dtype=float)
             inception_embedding = np.zeros((vector_dim,), dtype=float)
             vgg_embedding = np.zeros((vector_dim,), dtype=float)
@@ -240,4 +238,3 @@ if __name__ == "__main__":
             print(str(len(new_posts)))
             return_post=load_ir_model_vectorise(new_posts)
             new_collection.insert_many(return_post)
-    print(not_found_count)
