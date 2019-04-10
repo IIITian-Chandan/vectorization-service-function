@@ -7,7 +7,7 @@ def load_name_description_bert_model(post):
     try:
         name = post['name']
         description = post['description_text']
-        data = {'id':post['_id'],'texts':[name+' ||| '+description],'is_tokenized':False}
+        data = {'id':str(post["_id"]).replace("ObjectId(\"",'').replace("\")",''),'texts':[name+' ||| '+description],'is_tokenized':False}
         payload = json.dumps(data)
         headers = {'content-type': 'application/json'}
         response = requests.request('POST', url, headers = headers, data = payload, allow_redirects=False)
