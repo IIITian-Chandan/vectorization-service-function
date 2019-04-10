@@ -143,12 +143,12 @@ def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2
         post['vgg_vector'] = vgg_embedding.tolist()
 
         model_posts.append(post)
-    for i in model_posts:
-        name_embedding = name_model(post)
+    for i in tqdm(model_posts):
+        name_embedding = name_model(i)
         i['name_vector'] = name_embedding
 
-    for i in model_posts:
-        name_desc_embedding = name_desc_model(post)
+    for i in tqdm(model_posts):
+        name_desc_embedding = name_desc_model(i)
         i['name_desc_vector'] = name_desc_embedding
 
     return model_posts
