@@ -93,6 +93,7 @@ from get_image_vector3 import deep_rank_model as vgg_model
 from get_name_vector import load_name_bert_model as name_model
 from get_name_desc_vector import load_name_description_bert_model as name_desc_model
 
+not_found_count =0
 
 def load_model():
     resnet_model_file = "filestore/k8/vector_service/ir_vector/resnet_old/model.h5"
@@ -115,7 +116,7 @@ def load_model():
 
 
 
-def load_ir_model_vectorise(batch_posts, pre_path="/home/ubuntu/filestore/combined_products_2019_03_14"):
+def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2019_03_14"):
     model_posts = []
     vector_dim=1024
 
@@ -132,6 +133,7 @@ def load_ir_model_vectorise(batch_posts, pre_path="/home/ubuntu/filestore/combin
                 inception_embedding = inception_model_loaded.predict([image])[0]
                 vgg_embedding = vgg_model_loaded.predict([image])[0]
         except OSError as ose:
+            not_found_count+=1
             resnet_embedding = np.zeros((vector_dim,), dtype=float)
             inception_embedding = np.zeros((vector_dim,), dtype=float)
             vgg_embedding = np.zeros((vector_dim,), dtype=float)
@@ -224,8 +226,8 @@ if __name__ == "__main__":
     )
     db_prod = client_dev.black_widow_development
     db_dev = client_dev.faissal_dev
-    collection = db_prod.hervis_combined_products
-    new_collection = db_dev["freshlabels_cz"+"_3ir_2nlp_"+ datetime.strftime(datetime.now(), '%Y_%m_%d')]
+    collection = db_prod.freshlabels_cz_combined_products
+    new_collection = db_dev["freshlabels_cz_combined_products"+"_old_3ir_2nlp_"+ datetime.strftime(datetime.now(), '%Y_%m_%d')]
     for key, website_id in website_id_hash.items():
         print(key)
         limit = collection.find({'website_id':ObjectId(website_id)}).count()
@@ -243,3 +245,4 @@ if __name__ == "__main__":
             print(str(len(new_posts)))
             return_post=load_ir_model_vectorise(new_posts)
             new_collection.insert_many(return_post)
+    print(not_found_count)
