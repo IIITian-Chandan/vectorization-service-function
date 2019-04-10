@@ -187,7 +187,7 @@ def clean_post(post):
     return new_post
 
 if __name__ == "__main__":
-    model_name = sys.argv[1]
+
     WEBSITE_ID_HASH = {}
     WEBSITE_ID_HASH["queens_cz"] = "5bf39a8bc9a7f60004dd8d04"
     WEBSITE_ID_HASH["zoot_cz"] = "5bf39a6fc9a7f60004dd8d03"
