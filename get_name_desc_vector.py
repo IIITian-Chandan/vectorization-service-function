@@ -1,7 +1,7 @@
 import requests
 import json
 from tqdm import tqdm
-url = 'http://35.196.152.172:5008/encode'
+url = 'http://35.196.31.248:5008/encode'
 
 def load_name_description_bert_model(post):
     try:

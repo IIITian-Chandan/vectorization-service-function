@@ -1,7 +1,7 @@
 import requests
 import json
 from tqdm import tqdm
-url = 'http://35.196.152.172:5008/encode'
+url = 'http://35.196.31.248:5008/encode'
 def load_name_bert_model(post):
     try:
         name = post['name']
@@ -13,4 +13,5 @@ def load_name_bert_model(post):
         name_vector = json.loads(response.text)['result'][0]
     except:
         name_vector = [0]*768
+
     return name_vector
