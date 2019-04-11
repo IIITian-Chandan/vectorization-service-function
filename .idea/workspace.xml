@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vector_to_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="231" column="22" lean-forward="true" selection-start-line="231" selection-start-column="22" selection-end-line="231" selection-end-column="22" />
+            <state relative-caret-position="733">
+              <caret line="239" column="34" lean-forward="true" selection-start-line="239" selection-start-column="34" selection-end-line="239" selection-end-column="34" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -141,12 +141,12 @@
       <option name="presentableId" value="Default" />
       <updated>1554896112779</updated>
       <workItem from="1554896118444" duration="6046000" />
-      <workItem from="1554960100948" duration="628000" />
+      <workItem from="1554960100948" duration="882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6674000" />
+    <option name="totallyTimeSpent" value="6928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -181,8 +181,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/vector_to_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="231" column="22" lean-forward="true" selection-start-line="231" selection-start-column="22" selection-end-line="231" selection-end-column="22" />
+        <state relative-caret-position="733">
+          <caret line="239" column="34" lean-forward="true" selection-start-line="239" selection-start-column="34" selection-end-line="239" selection-end-column="34" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
