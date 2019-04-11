@@ -6,6 +6,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="deep_nlp_unified_service" />
+    <orderEntry type="module" module-name="faissal-search" />
+    <orderEntry type="module" module-name="bit_translation_service" />
+    <orderEntry type="module" module-name="Vectorization-flask" />
   </component>
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />

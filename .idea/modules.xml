@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Vectorization-flask/.idea/Vectorization-flask.iml" filepath="$PROJECT_DIR$/../Vectorization-flask/.idea/Vectorization-flask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bit_translation_service/.idea/bit_translation_service.iml" filepath="$PROJECT_DIR$/../bit_translation_service/.idea/bit_translation_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../deep_nlp_unified_service/.idea/deep_nlp_unified_service.iml" filepath="$PROJECT_DIR$/../deep_nlp_unified_service/.idea/deep_nlp_unified_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../faissal-search/.idea/faissal-search.iml" filepath="$PROJECT_DIR$/../faissal-search/.idea/faissal-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/get_vector_python.iml" filepath="$PROJECT_DIR$/.idea/get_vector_python.iml" />
     </modules>
   </component>

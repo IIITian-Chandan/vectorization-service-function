@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Vectorization-flask" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../bit_translation_service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../faissal-search" vcs="Git" />
   </component>
 </project>
