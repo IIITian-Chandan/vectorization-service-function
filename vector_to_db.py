@@ -99,10 +99,10 @@ def load_model():
 
     resnet_model_loaded = resnet_model()
     resnet_model_loaded.load_weights(resnet_model_file)
-    inception_model_loaded = inception_model()
-    inception_model_loaded.load_weights(inception_model_file)
-    vgg_model_loaded = vgg_model()
-    vgg_model_loaded.load_weights(vgg_model_file)
+    # inception_model_loaded = inception_model()
+    # inception_model_loaded.load_weights(inception_model_file)
+    # vgg_model_loaded = vgg_model()
+    # vgg_model_loaded.load_weights(vgg_model_file)
 
     global graph
     graph = tf.get_default_graph()
@@ -123,33 +123,33 @@ def load_ir_model_vectorise(batch_posts, pre_path="filestore/combined_products_2
             image = np.expand_dims(image, axis = 0)
             with graph.as_default():
                 resnet_embedding = resnet_model_loaded.predict([image])[0]
-                inception_embedding = inception_model_loaded.predict([image])[0]
-                vgg_embedding = vgg_model_loaded.predict([image])[0]
+                # inception_embedding = inception_model_loaded.predict([image])[0]
+                # vgg_embedding = vgg_model_loaded.predict([image])[0]
         except OSError as ose:
             resnet_embedding = np.zeros((vector_dim,), dtype=float)
-            inception_embedding = np.zeros((vector_dim,), dtype=float)
-            vgg_embedding = np.zeros((vector_dim,), dtype=float)
+            # inception_embedding = np.zeros((vector_dim,), dtype=float)
+            # vgg_embedding = np.zeros((vector_dim,), dtype=float)
         except:
             raise
             resnet_embedding = np.zeros((vector_dim,), dtype=float)
-            inception_embedding = np.zeros((vector_dim,), dtype=float)
-            vgg_embedding = np.zeros((vector_dim,), dtype=float)
+            # inception_embedding = np.zeros((vector_dim,), dtype=float)
+            # vgg_embedding = np.zeros((vector_dim,), dtype=float)
 
 
 
 
         post['resnet_vector'] = resnet_embedding.tolist()
-        post['inception_vector'] = inception_embedding.tolist()
-        post['vgg_vector'] = vgg_embedding.tolist()
+        # post['inception_vector'] = inception_embedding.tolist()
+        # post['vgg_vector'] = vgg_embedding.tolist()
 
         model_posts.append(post)
-    for i in tqdm(model_posts):
-        name_embedding = name_model(i)
-        i['name_vector'] = name_embedding
-
-    for i in tqdm(model_posts):
-        name_desc_embedding = name_desc_model(i)
-        i['name_desc_vector'] = name_desc_embedding
+    # for i in tqdm(model_posts):
+    #     name_embedding = name_model(i)
+    #     i['name_vector'] = name_embedding
+    #
+    # for i in tqdm(model_posts):
+    #     name_desc_embedding = name_desc_model(i)
+    #     i['name_desc_vector'] = name_desc_embedding
 
     return model_posts
 
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     db_prod = client_dev.black_widow_development
     db_dev = client_dev.faissal_dev
     collection = db_dev.freshlabels_cz_combined_products
-    new_collection = db_dev["freshlabels_cz_combined_products"+"_old_3ir_2nlp_"+ datetime.strftime(datetime.now(), '%Y_%m_%d')]
+    new_collection = db_dev["freshlabels_cz_combined_products"+"_old_resnet_"+ datetime.strftime(datetime.now(), '%Y_%m_%d')]
     for key, website_id in website_id_hash.items():
         print(key)
         limit = collection.find({'website_id':ObjectId(website_id)}).count()
